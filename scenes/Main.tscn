@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Main.cs" type="Script" id=1]
+[ext_resource path="res://scenes/Hud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Window.tscn" type="PackedScene" id=3]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 3
+background_sky = SubResource( 1 )
+background_color = Color( 0.52549, 0.52549, 0.52549, 1 )
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Hud" parent="." instance=ExtResource( 2 )]
+
+[node name="sky" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="cam" type="Camera" parent="."]
+transform = Transform( -0.133641, 0, -0.99103, 0, 1, 0, 0.99103, 0, -0.133641, -6.57, 1.26, -0.98 )
+
+[node name="Window" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-007, 0, 1, 0, 3.25841e-007, 0, -1, 0, 0, 0 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -1.62921e-007, 0, -1, 0, 1, 0, 1, 0, -1.62921e-007, -7.6898, 3.33425, 0 )
+light_energy = 0.5
+spot_range = 12.7
