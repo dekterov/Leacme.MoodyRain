@@ -5,6 +5,7 @@
 This application features the ability to simulate a rainy mood through a window.
 
 ![][image_screenshot]
+![index](https://user-images.githubusercontent.com/6654513/71703537-5a332d80-2d92-11ea-81ce-7b9ddf4b7e17.png)
 
 ## Application Compiling
 
